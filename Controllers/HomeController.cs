@@ -11,8 +11,8 @@ namespace CommunityAssist2017.Controllers
     {
         public ActionResult Index()
         {
-            CommunityAssist2017Entities see = new CommunityAssist2017Entities();
-            return View(see.GrantTypes.ToList());
+            CommunityAssist2017Entities cae = new CommunityAssist2017Entities();
+            return View(cae.GrantTypes.ToList());
         }
 
         public ActionResult About()
