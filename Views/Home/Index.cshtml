@@ -1,28 +1,29 @@
 ﻿@model IEnumerable<CommunityAssist2017.Models.GrantType>
-
 @{
     ViewBag.Title = "Home Page";
 }
-<h1>Our Grants are great!</h1>
-<table class="table">
+
+<h1>Grant Types</h1>
+<table class="table table-striped">
     <thead>
         <tr>
-            <th scope = "col">Type</th>
+            <th scope="col">Type</th>
             <th scope="col">Description</th>
             <th scope="col">One-Time Max</th>
             <th scope="col">Lifetime Max</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(model =>item.GrantTypeName)</td>
-                <td>@Html.DisplayFor(model =>item.GrantTypeDescription)</td>
-                <td>@Html.DisplayFor(model =>item.GrantTypemaximum)</td>
-                <td>@Html.DisplayFor(model =>item.GrantTypeLifetimeMaximum)</td>
-            </tr>
-        }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.GrantTypeName)</td>
+            <td>@Html.DisplayFor(model => item.GrantTypeDescription)</td>
+            <td>@Html.DisplayFor(model => item.GrantTypemaximum)</td>
+            <td>@Html.DisplayFor(model => item.GrantTypeLifetimeMaximum)</td>
+        </tr>
+
+    }
     </tbody>
 
 </table>
